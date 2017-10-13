@@ -1,0 +1,38 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/purpleNotification</item>
+        <item name="colorAccent">@color/purpleBar</item>
+    </style>
+
+
+
+    <style name="AppThemex" parent="Theme.AppCompat.Light">
+        <item name="actionBarStyle">@style/ActionBar</item>
+        <item name="android:textColor">@color/thirdFragmentColor</item>
+    </style>
+
+    <!-- Action Bar Styles -->
+    <style name="ActionBar" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/purpleBar</item>
+        <item name="android:actionBarItemBackground">@color/purpleNotification</item>
+        <item name="background">@color/purpleBar</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/purpleNotification</item>
+        <item name="colorAccent">@color/purpleBar</item>
+    </style>
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+
+</resources>

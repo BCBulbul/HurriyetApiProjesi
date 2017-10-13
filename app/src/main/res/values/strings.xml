@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">HurriyetApiProjesi</string>
+    <string name="action_settings">Settings</string>
+    <string name="com.twitter.sdk.android.CONSUMER_KEY">Rv2be1Hliqux7U2ex6tbRhiBr</string>
+    <string name="com.twitter.sdk.android.CONSUMER_SECRET">	Cz88RWZDDqMzI6r90C3SRVNGpzCp0Upee8iNnCXFThtLKFBx2l
+</string>
+
+    <string name="facebook_app_id">122600918450140</string>
+</resources>
