@@ -145,8 +145,8 @@ public class MainActivity extends AppCompatActivity
         linearLayoutManager = new LinearLayoutManager(MainActivity.this);
         try
         {
-                adapterData = getFirstDataNoFilter();
-                counter+=10;
+            adapterData = getFirstDataNoFilter();
+            counter+=10;
         }
         catch (ExecutionException e)
         {

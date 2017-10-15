@@ -1,27 +1,13 @@
 package burakcanbulbul.com.hurriyetapiprojesi.Activities;
 
-import android.app.ActionBar;
-import android.app.Activity;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
-import android.content.pm.Signature;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
-
-import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
-import android.util.Base64;
-import android.util.Log;
 import android.widget.Toast;
 
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
-import com.facebook.login.Login;
 import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
 import com.twitter.sdk.android.core.Callback;
@@ -32,9 +18,6 @@ import com.twitter.sdk.android.core.TwitterCore;
 import com.twitter.sdk.android.core.TwitterException;
 import com.twitter.sdk.android.core.TwitterSession;
 import com.twitter.sdk.android.core.identity.TwitterLoginButton;
-
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 
 import burakcanbulbul.com.hurriyetapiprojesi.R;
 
@@ -93,7 +76,8 @@ public class LoginActivity extends AppCompatActivity
     {
         String username = session.getUserName();
         Toast.makeText(LoginActivity.this, "Twitter'a başarıyla giriş yapıldı, haberler sayfası getiriliyor", Toast.LENGTH_LONG).show();
-        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+
+        Intent intent = new Intent(LoginActivity.this, RetrofitNewsActivity.class);
         intent.putExtra("username", username);
         startActivity(intent);
     }
@@ -128,7 +112,7 @@ public class LoginActivity extends AppCompatActivity
                     {
 
                         Toast.makeText(LoginActivity.this, "Facebook'a başarıyla giriş yapıldı, haberler sayfası getiriliyor", Toast.LENGTH_LONG).show();
-                        Intent intent = new Intent(LoginActivity.this,MainActivity.class);
+                        Intent intent = new Intent(LoginActivity.this,RetrofitNewsActivity.class);
                         startActivity(intent);
                     }
 

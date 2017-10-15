@@ -19,6 +19,7 @@ import com.squareup.picasso.Picasso;
 import java.util.List;
 
 import burakcanbulbul.com.hurriyetapiprojesi.Classes.News;
+import burakcanbulbul.com.hurriyetapiprojesi.Classes.NewsModel;
 import burakcanbulbul.com.hurriyetapiprojesi.ProgressViewHolder;
 import burakcanbulbul.com.hurriyetapiprojesi.R;
 import burakcanbulbul.com.hurriyetapiprojesi.RecyclerViewHolders;
@@ -30,6 +31,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewHolder
     private int visibleThreshold = 5;
     private int lastVisibleItem, totalItemCount;
     private boolean loading;
+    private boolean isMoreDataAvailable = true;;
     private OnLoadMoreListener onLoadMoreListener;
 
     public RecyclerViewAdapter(final Context context, List<News> itemList, RecyclerView recyclerView)
@@ -89,10 +91,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewHolder
             News news = itemList.get(position);
 
 
-            System.out.println(news.getNewsImage());
+//            Log.d("News Desscription",news.getNewsImage());
             ((RecyclerViewHolders)holder).textTitle.setText(news.getTitle());
             ((RecyclerViewHolders)holder).textDescription.setText(news.getDescription());
             ((RecyclerViewHolders)holder).textUrl.setText(news.getUrl());
+
+//            Log.d("File",news.files.get(position).fileUrl);
 
             if(news.getNewsImage() != null)
             {
@@ -124,6 +128,15 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewHolder
     {
         this.onLoadMoreListener = onLoadMoreListener;
     }
+
+    public boolean isMoreDataAvailable() {
+        return isMoreDataAvailable;
+    }
+
+    public void setMoreDataAvailable(boolean moreDataAvailable) {
+        isMoreDataAvailable = moreDataAvailable;
+    }
+
     public interface OnLoadMoreListener
     {
         void onLoadMore();

@@ -25,21 +25,27 @@ import burakcanbulbul.com.hurriyetapiprojesi.R;
 
 public class ShowIntro extends AppIntro
 {
-    private void printKeyHash() {
+    private void printKeyHash()
+    {
         // Add code to print out the key hash
-        try {
+        try
+        {
             PackageInfo info = getPackageManager().getPackageInfo(
                     "burakcanbulbul.com.hurriyetapiprojesi",
                     PackageManager.GET_SIGNATURES);
-            for (Signature signature : info.signatures) {
+            for (Signature signature : info.signatures)
+            {
                 MessageDigest md = MessageDigest.getInstance("SHA");
                 md.update(signature.toByteArray());
                 Log.d("KeyHash:", Base64.encodeToString(md.digest(), Base64.DEFAULT));
             }
-        } catch (PackageManager.NameNotFoundException e) {
+        }
+        catch (PackageManager.NameNotFoundException e)
+        {
             e.printStackTrace();
 
-        } catch (NoSuchAlgorithmException e) {
+        } catch (NoSuchAlgorithmException e)
+        {
             e.printStackTrace();
         }
     }
@@ -67,7 +73,7 @@ public class ShowIntro extends AppIntro
     {
         super.onSkipPressed(currentFragment);
 
-        Toast.makeText(this,"Giriş Sayfasına yönleniyorsunuz",Toast.LENGTH_LONG).show();
+        Toast.makeText(this,"Giriş Sayfasına yönleniyorsunuz",Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(ShowIntro.this,LoginActivity.class);
         startActivity(intent);
     }
@@ -83,7 +89,7 @@ public class ShowIntro extends AppIntro
     public void onDonePressed(Fragment currentFragment)
     {
         super.onDonePressed(currentFragment);
-
+        Toast.makeText(this,"Giriş Sayfasına yönleniyorsunuz",Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(ShowIntro.this,LoginActivity.class);
         startActivity(intent);
         finish();
