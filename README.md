@@ -1,5 +1,5 @@
 # HurriyetApiProjesi
-I have used Firebase,Picasso,Facebook API,Twitter API and Hürriyet API for retrieve news.
+I have used Retrofit,Firebase,Picasso,Facebook API,Twitter API and Hürriyet API for retrieve news.
 
 Youtube Link : 
 
