@@ -3,5 +3,5 @@ I have used Firebase,Picasso,Facebook API,Twitter API and Hürriyet API for retr
 
 Youtube Link : 
 
-[Hürriyet Api Haberler Uygulaması - Android](https://youtube.com/watch?v=SvSVwGi9sJ4&t=2s)
+[Hürriyet Api Haberler Uygulaması](https://www.youtube.com/watch?v=VnhNUWj7nRc)
 
